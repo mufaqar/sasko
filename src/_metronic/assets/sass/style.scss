@@ -1,0 +1,26 @@
+//
+// Theme style
+//
+
+// Initialize
+@import "init";
+
+// Components
+@import "./core/components/components";
+@import "components/components";
+
+// Layout
+@import "./core/layout/base/layout";
+@import "layout/layout";
+
+
+
+.w-full{
+     width: 100% !important;
+}
+.right-bar-search{
+     display: flex;
+     align-items: center;
+     background: #12121B;
+     border-radius: 10px;
+}
