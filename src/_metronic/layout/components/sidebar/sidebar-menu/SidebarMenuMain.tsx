@@ -5,6 +5,95 @@ import {KTSVG} from '../../../../helpers'
 import {SidebarMenuItemWithSub} from './SidebarMenuItemWithSub'
 import {SidebarMenuItem} from './SidebarMenuItem'
 
+const NavItems = [
+  {
+    parentName: 'Developer',
+    parentLink: '#',
+    icon: '/media/icons/duotune/general/gen022.svg',
+    childItem: [
+      {
+        title: '1',
+        link: '#',
+      },
+      {
+        title: '2',
+        link: '#',
+      },
+    ],
+  },
+  {
+    parentName: 'Settings',
+    parentLink: '#',
+    icon: '/media/icons/duotune/general/gen022.svg',
+    childItem: [
+      {
+        title: '1',
+        link: '#',
+      },
+    ],
+  },
+  {
+    parentName: 'Websites',
+    parentLink: '#',
+    icon: '/media/icons/duotune/general/gen022.svg',
+    childItem: [
+      {
+        title: '1',
+        link: '#',
+      },
+    ],
+  },
+  {
+    parentName: 'Orginization settings',
+    parentLink: '#',
+    icon: '/media/icons/duotune/general/gen022.svg',
+    childItem: [
+      {
+        title: '1',
+        link: '#',
+      },
+    ],
+  },
+  {
+    parentName: 'Request for orginization',
+    parentLink: '#',
+    icon: '/media/icons/duotune/general/gen022.svg',
+    childItem: [
+      {
+        title: '1',
+        link: '#',
+      },
+    ],
+  },
+  {
+    parentName: 'Customers',
+    parentLink: '#',
+    icon: '/media/icons/duotune/general/gen022.svg',
+    childItem: [
+      {
+        title: '1',
+        link: '#',
+      },
+    ],
+  },
+  {
+    parentName: 'Procurments',
+    parentLink: '#',
+    icon: '/media/icons/duotune/general/gen022.svg',
+  },
+  {
+    parentName: 'Dms',
+    parentLink: '#',
+    icon: '/media/icons/duotune/general/gen022.svg',
+    childItem: [
+      {
+        title: '1',
+        link: '#',
+      },
+    ],
+  },
+]
+
 const SidebarMenuMain = () => {
   const intl = useIntl()
 
@@ -27,7 +116,25 @@ const SidebarMenuMain = () => {
           <span className='menu-section text-muted text-uppercase fs-8 ls-1'>Crafted</span>
         </div>
       </div>
-      <SidebarMenuItemWithSub
+
+      {NavItems.map((item, idx) => {
+        return (
+          <SidebarMenuItemWithSub
+            to={item.parentLink}
+            title={item?.parentName}
+            fontIcon='bi-archive'
+            icon={item.icon}
+          >
+            {
+              item.childItem && item.childItem.map((childItem,i)=>(
+                <SidebarMenuItem to={childItem.link} title={childItem.title} hasBullet={true} />
+              ))
+            }
+          </SidebarMenuItemWithSub>
+        )
+      })}
+
+      {/* <SidebarMenuItemWithSub
         to='/crafted/pages'
         title='Pages'
         fontIcon='bi-archive'
@@ -113,8 +220,8 @@ const SidebarMenuMain = () => {
         icon='/media/icons/duotune/general/gen051.svg'
         title='User management'
         fontIcon='bi-layers'
-      />
-      <div className='menu-item'>
+      /> 
+       <div className='menu-item'>
         <a
           target='_blank'
           className='menu-link'
@@ -125,7 +232,7 @@ const SidebarMenuMain = () => {
           </span>
           <span className='menu-title'>Changelog {process.env.REACT_APP_VERSION}</span>
         </a>
-      </div>
+      </div> */}
     </>
   )
 }
