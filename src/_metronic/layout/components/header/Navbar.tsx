@@ -13,13 +13,19 @@ const Navbar = () => {
   const {config} = useLayout()
   return (
     <div className='app-navbar flex-shrink-0'>
-      <div className={clsx('app-navbar-item align-items-stretch', itemClass)}>
+      {/* <div className={clsx('app-navbar-item align-items-stretch', itemClass)}>
         <Search />
+      </div> */}
+
+      <div className={clsx('app-navbar-item', itemClass)}>
+        <div id='kt_activities_toggle' className={btnClass}>
+          <KTSVG path='/media/icons/duotune/general/cart.svg' className={btnIconClass} />
+        </div>
       </div>
 
       <div className={clsx('app-navbar-item', itemClass)}>
         <div id='kt_activities_toggle' className={btnClass}>
-          <KTSVG path='/media/icons/duotune/general/gen032.svg' className={btnIconClass} />
+          <KTSVG path='/media/icons/duotune/general/list.svg' className={btnIconClass} />
         </div>
       </div>
 
@@ -30,7 +36,7 @@ const Navbar = () => {
           data-kt-menu-placement='bottom-end'
           className={btnClass}
         >
-          <KTSVG path='/media/icons/duotune/general/gen022.svg' className={btnIconClass} />
+          <KTSVG path='/media/icons/duotune/general/callendar.svg' className={btnIconClass} />
         </div>
         <HeaderNotificationsMenu />
       </div>

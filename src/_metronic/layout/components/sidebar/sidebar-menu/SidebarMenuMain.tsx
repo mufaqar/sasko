@@ -18,6 +18,16 @@ const NavItems = [
       {
         title: '2',
         link: '#',
+        childItem: [
+          {
+            title: 'Extra Child Item',
+            link: '#',
+          },
+          {
+            title: 'Extra Child Item 2',
+            link: '#',
+          },
+        ],
       },
     ],
   },
@@ -118,20 +128,50 @@ const SidebarMenuMain = () => {
       </div>
 
       {NavItems.map((item, idx) => {
-        return (
-          <SidebarMenuItemWithSub
-            to={item.parentLink}
-            title={item?.parentName}
-            fontIcon='bi-archive'
-            icon={item.icon}
-          >
-            {
-              item.childItem && item.childItem.map((childItem,i)=>(
-                <SidebarMenuItem to={childItem.link} title={childItem.title} hasBullet={true} />
-              ))
-            }
-          </SidebarMenuItemWithSub>
-        )
+        if (item.childItem) {
+          return (
+            <SidebarMenuItemWithSub
+              to={item.parentLink}
+              title={item?.parentName}
+              fontIcon='bi-archive'
+              icon={item.icon}
+            >
+              {item.childItem &&
+                item.childItem.map((childItem, i) => {
+                  if (childItem?.childItem) {
+                    return (
+                      <SidebarMenuItemWithSub
+                        to={childItem.link}
+                        title={childItem.title}
+                        hasBullet={true}
+                      >
+                        {childItem?.childItem &&
+                          childItem?.childItem.map((eItem, id) => {
+                            return (
+                              <SidebarMenuItem
+                                to={eItem.link}
+                                title={eItem.title}
+                                hasBullet={true}
+                              />
+                            )
+                          })}
+                      </SidebarMenuItemWithSub>
+                    )
+                  } else {
+                    return (
+                      <SidebarMenuItem
+                        to={childItem.link}
+                        title={childItem.title}
+                        hasBullet={true}
+                      />
+                    )
+                  }
+                })}
+            </SidebarMenuItemWithSub>
+          )
+        } else {
+          return <SidebarMenuItem to={item?.parentLink} title={item?.parentName} icon={item.icon} />
+        }
       })}
 
       {/* <SidebarMenuItemWithSub
