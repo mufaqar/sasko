@@ -9,7 +9,7 @@ const NavItems = [
   {
     parentName: 'Developer',
     parentLink: '#',
-    icon: '/media/icons/duotune/general/gen022.svg',
+    icon: '/media/icons/duotune/general/developer.svg',
     childItem: [
       {
         title: '1',
@@ -34,7 +34,7 @@ const NavItems = [
   {
     parentName: 'Settings',
     parentLink: '#',
-    icon: '/media/icons/duotune/general/gen022.svg',
+    icon: '/media/icons/duotune/general/setting.svg',
     childItem: [
       {
         title: '1',
@@ -45,7 +45,7 @@ const NavItems = [
   {
     parentName: 'Websites',
     parentLink: '#',
-    icon: '/media/icons/duotune/general/gen022.svg',
+    icon: '/media/icons/duotune/general/website.svg',
     childItem: [
       {
         title: '1',
@@ -56,7 +56,7 @@ const NavItems = [
   {
     parentName: 'Orginization settings',
     parentLink: '#',
-    icon: '/media/icons/duotune/general/gen022.svg',
+    icon: '/media/icons/duotune/general/breafcase.svg',
     childItem: [
       {
         title: '1',
@@ -67,7 +67,7 @@ const NavItems = [
   {
     parentName: 'Request for orginization',
     parentLink: '#',
-    icon: '/media/icons/duotune/general/gen022.svg',
+    icon: '/media/icons/duotune/general/breafcase.svg',
     childItem: [
       {
         title: '1',
@@ -78,7 +78,7 @@ const NavItems = [
   {
     parentName: 'Customers',
     parentLink: '#',
-    icon: '/media/icons/duotune/general/gen022.svg',
+    icon: '/media/icons/duotune/general/person.svg',
     childItem: [
       {
         title: '1',
@@ -89,12 +89,12 @@ const NavItems = [
   {
     parentName: 'Procurments',
     parentLink: '#',
-    icon: '/media/icons/duotune/general/gen022.svg',
+    icon: '/media/icons/duotune/general/breafcase.svg',
   },
   {
     parentName: 'Dms',
     parentLink: '#',
-    icon: '/media/icons/duotune/general/gen022.svg',
+    icon: '/media/icons/duotune/general/breafcase.svg',
     childItem: [
       {
         title: '1',
