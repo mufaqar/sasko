@@ -68,7 +68,7 @@ const Horizontal: FC = () => {
                [1,2,3,4,5,6,7,8].map((item,idx)=>{
                 return(
                   <li className='card'>
-                    <img src='/media/avatars/300-1.jpg' alt='Metronic' className='profile' width={40} />
+                    <img src='/media/avatars/300-1.jpg' alt='Metronic' className='profile' width={40}/>
                     <span>Max Smith</span>
                   </li>
                 )

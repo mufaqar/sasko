@@ -17,7 +17,7 @@ const NavItems = [
       },
       {
         title: 'List',
-        link: '/crafted/pages/wizards/horizontal',
+        link: '/list',
       },
       {
         title: '2',
