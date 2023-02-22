@@ -12,8 +12,12 @@ const NavItems = [
     icon: '/media/icons/duotune/general/developer.svg',
     childItem: [
       {
-        title: '1',
-        link: '#',
+        title: 'Users',
+        link: '/dashboard',
+      },
+      {
+        title: 'List',
+        link: '/crafted/pages/wizards/horizontal',
       },
       {
         title: '2',
@@ -174,7 +178,13 @@ const SidebarMenuMain = () => {
         }
       })}
 
-      {/* <SidebarMenuItemWithSub
+
+
+
+
+      
+
+       {/*<SidebarMenuItemWithSub
         to='/crafted/pages'
         title='Pages'
         fontIcon='bi-archive'
@@ -272,7 +282,7 @@ const SidebarMenuMain = () => {
           </span>
           <span className='menu-title'>Changelog {process.env.REACT_APP_VERSION}</span>
         </a>
-      </div> */}
+    </div> */}
     </>
   )
 }

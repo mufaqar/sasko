@@ -32,9 +32,9 @@ const Tables: FC = () => {
         </div>
         {/* end::Col */}
       </div>
-      {/* end::Row */}
+      
 
-      {/* begin::Row */}
+      
       <div className='row g-5 g-xl-8'>
         {/* begin::Col */}
         <div className='col-xl-6'>
@@ -48,9 +48,9 @@ const Tables: FC = () => {
         </div>
         {/* end::Col */}
       </div>
-      {/* end::Row */}
+      
 
-      {/* begin::Row */}
+     
       <div className='row g-5 g-xl-8'>
         {/* begin::Col */}
         <div className='col-xl-6'>
@@ -66,7 +66,7 @@ const Tables: FC = () => {
       </div>
       {/* end::Row */}
 
-      {/* begin::Row */}
+     
       <div className='row g-5 g-xl-8'>
         {/* begin::Col */}
         <div className='col-xl-6'>

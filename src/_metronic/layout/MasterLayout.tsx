@@ -33,10 +33,10 @@ const MasterLayout = () => {
               <Sidebar />
               <div className='app-main flex-column flex-row-fluid' id='kt_app_main'>
                 <div className='d-flex flex-column flex-column-fluid'>
-                  {/* <ToolbarWrapper /> 
-                   <Content>
+                    {/* <ToolbarWrapper />  */}
+                    <Content>
                     <Outlet />
-                  </Content> */}
+                  </Content>
                 </div>
                 <FooterWrapper />
               </div>

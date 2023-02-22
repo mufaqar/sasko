@@ -24,3 +24,42 @@
      background: #12121B;
      border-radius: 10px;
 }
+.content-list-with-image{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     .profile{
+          border-radius: 50%;
+     }
+     ul{
+          padding-left: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          margin-top: 5rem  !important;
+          align-items: center;
+          max-width: 500px;
+          width: 100%;
+          li{
+               padding: 12px 20px;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               gap: 12px;
+               flex-direction: row;
+               width: 100%;
+               
+               span{
+                    text-transform: capitalize;
+               }
+          }
+     }
+     .exit{
+          margin-top: 1.5rem;
+          background: none;
+          border: none;
+          margin-bottom: 3rem;
+          color: white;
+     }
+}
